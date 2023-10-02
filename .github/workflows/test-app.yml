@@ -15,3 +15,9 @@ jobs:
         with:
           build: npm run build
           start: npm start
+      - name: Upload Cypress Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-results
+          path: cypress/videos
+          if-no-files-found: error
