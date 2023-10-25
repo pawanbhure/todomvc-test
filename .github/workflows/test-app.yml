@@ -11,7 +11,9 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: os info
-        run: cat /etc/*release
+        run: |
+          cat /etc/*release
+          apt list --installed
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
