@@ -28,5 +28,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: github-pages/action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
           publish_dir: cypress/video    
