@@ -25,3 +25,8 @@ jobs:
           name: cypress-results
           path: cypress/videos
           if-no-files-found: error
+      - name: Deploy to GitHub Pages
+        uses: github-pages/action@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/video    
